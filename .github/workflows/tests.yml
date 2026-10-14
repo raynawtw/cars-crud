@@ -56,4 +56,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cars-crud:latest
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/cars-crud:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/cars-crud:sha-${{ github.sha }}
